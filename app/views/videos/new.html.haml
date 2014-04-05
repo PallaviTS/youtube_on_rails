@@ -1,6 +1,7 @@
 %div.container
   %h1="New video"
   = form_for @video do |form|
+    = render 'shared/errors', object: @video
     .form-group
       = form.label :link
       = form.text_field :link, class: 'form-control', require: true
