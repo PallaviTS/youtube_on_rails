@@ -1,0 +1,10 @@
+%div.container
+  %h1="New video"
+  = form_for @video do |form|
+    .form-group
+      = form.label :link
+      = form.text_field :link, class: 'form-control', require: true
+      %span.help-block= "A link to the video on YouTube."
+    = form.submit class: 'btn btn-primary'
+
+
